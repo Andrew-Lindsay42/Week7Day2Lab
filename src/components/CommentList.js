@@ -2,11 +2,14 @@ import React from "react";
 import Comment from "./Comment";
 
 
-const CommentList = () => {
+const CommentList = ({comments}) => {
+    const commentNodes = comments.map((comment) => {
+        return (<Comment author={comment.author} key={comment.id} text={comment.text}></Comment>
+    )})
     return (
         <>
-        <h2>This is a comment List</h2>
-        <Comment />
+        <h2>Comments</h2>
+        {commentNodes}
         </>
     )
 }
