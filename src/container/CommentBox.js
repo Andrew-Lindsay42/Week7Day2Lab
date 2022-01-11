@@ -7,13 +7,13 @@ const CommentBox = () => {
     const [comments, setComments] = useState([
         {
             id: 1,
-            author: "Ben Dover",
+            author: "Ben Nevis",
             text: "How did I get here? I dont even like this."
           },
           {
             id: 2,
-            author: "Hugh Jass",
-            text: "I <3 Olivia Rodrigo, does anyone have her number?"
+            author: "Clark Johnstone",
+            text: "I like these songs"
           }
     ])
 
