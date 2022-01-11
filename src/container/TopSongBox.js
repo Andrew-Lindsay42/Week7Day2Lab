@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import SongList from "../components/SongList";
 
 const TopSongBox = () => {
-    const intialSongs = [
+    const initialSongs = [
         {id: 1,
         name: "Masked Wolf: Astronaut in the Ocean",
         url: "https://www.youtube.com/watch?v=YRNyamyBOIQ"
@@ -20,10 +20,12 @@ const TopSongBox = () => {
         url:"https://www.youtube.com/watch?v=At3xXBEy4n4"
         }
     ]
+
+    const [songs, setSongs] = useState(initialSongs)
     return(
         <>
         <h1>This is the Top Song List</h1>
-        <SongList />
+        <SongList songs={songs} />
         </>
     )
 }

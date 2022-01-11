@@ -1,10 +1,13 @@
 import React from "react";
 
 
-const Song = () => {
+
+const Song = ({song}) => {
     return (
-        <h4>This the song</h4>
-    )
+        <li className="song">
+            <a href={song.url}>{song.name}</a>
+        </li>
+    );
 }
 
-export default Song
+export default Song;

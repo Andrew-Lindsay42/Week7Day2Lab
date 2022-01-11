@@ -1,12 +1,20 @@
 import React from "react";
 import Song from "./Song";
 
-const SongList = () =>  {
+const SongList = ({songs}) =>  {
+
+    const Songs = songs.map((song) => {
+        return(
+            <Song song={song} key={song.id} />
+        )
+    })
+
     return(
-        <>
-        <h2>This is the Song List</h2>
-        <Song />
-        </>
+        <div class="song-list" >
+        <ul>
+            {Songs}
+        </ul>
+        </div>
     )
 };
 
